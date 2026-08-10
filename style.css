@@ -283,4 +283,210 @@ body {
     .stat strong {
         font-size: 1.6rem;
     }
+
+    .services-section {
+    padding: 5rem 0;
+}
+
+.services-header {
+    margin-bottom: 3rem;
+}
+
+.services-header h2 {
+    letter-spacing: -1px;
+}
+
+.service-card {
+    padding: 1.5rem;
+}
+}
+
+/* =========================================
+   SERVICES SECTION
+========================================= */
+
+.services-section {
+    padding: 7rem 0;
+    background: var(--dark-secondary);
+}
+
+
+/* =========================================
+   SERVICES HEADER
+========================================= */
+
+.services-header {
+    max-width: 700px;
+    margin-bottom: 4rem;
+}
+
+.section-eyebrow {
+    display: inline-block;
+
+    color: var(--primary-color);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 1rem;
+}
+
+.services-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    font-weight: 800;
+
+    margin-bottom: 1.5rem;
+}
+
+.services-header h2 span {
+    color: var(--primary-color);
+}
+
+.services-header p {
+    max-width: 600px;
+
+    color: var(--muted-text);
+    font-size: 1.05rem;
+}
+
+
+/* =========================================
+   SERVICE CARD
+========================================= */
+
+.service-card {
+    position: relative;
+
+    height: 100%;
+    padding: 2rem;
+
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid var(--border-color);
+    border-radius: 1.25rem;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.service-card::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: var(--primary-color);
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(200, 255, 0, 0.4);
+
+    background: rgba(255, 255, 255, 0.045);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* =========================================
+   SERVICE NUMBER
+========================================= */
+
+.service-number {
+    color: rgba(255, 255, 255, 0.25);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   SERVICE ICON
+========================================= */
+
+.service-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 1.5rem;
+
+    color: var(--primary-color);
+
+    background: rgba(200, 255, 0, 0.08);
+
+    border-radius: 0.9rem;
+
+    font-size: 1.25rem;
+}
+
+
+/* =========================================
+   SERVICE CONTENT
+========================================= */
+
+.service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--muted-text);
+
+    font-size: 0.95rem;
+
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   SERVICE LINK
+========================================= */
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: #ffffff;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.service-link:hover {
+    color: var(--primary-color);
+    gap: 0.8rem;
 }
