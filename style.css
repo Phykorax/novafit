@@ -632,12 +632,9 @@ body {
 }
 
 
-/* =========================================
-   ABOUT RESPONSIVE
-========================================= */
-
 @media (max-width: 991px) {
 
+    /* ABOUT RESPONSIVE */
     .about-image-wrapper {
         max-width: 700px;
         margin: 0 auto;
@@ -650,11 +647,22 @@ body {
     .experience-card {
         right: 20px;
     }
+
+    /* PROGRAMS RESPONSIVE */
+    .programs-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.programs-header > p {
+    max-width: 600px;
+}
 }
 
 
 @media (max-width: 576px) {
-
+    /* ABOUT RESPONSIVE */
     .about-section {
         padding: 5rem 0;
     }
@@ -681,4 +689,270 @@ body {
     .about-intro {
         font-size: 1rem !important;
     }
+
+    /* PROGRAMS RESPONSIVE */
+    .programs-section {
+    padding: 5rem 0;
+}
+
+.programs-header {
+    margin-bottom: 3rem;
+}
+
+.programs-header h2 {
+    letter-spacing: -1px;
+}
+
+.program-image {
+    height: 240px;
+}
+
+.program-content {
+    padding: 1.5rem;
+}
+}
+
+/* =========================================
+   PROGRAMS SECTION
+========================================= */
+
+.programs-section {
+    padding: 7rem 0;
+    background: var(--dark-secondary);
+}
+
+
+/* =========================================
+   PROGRAMS HEADER
+========================================= */
+
+.programs-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 3rem;
+
+    margin-bottom: 4rem;
+}
+
+.programs-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    font-weight: 800;
+
+    margin: 0;
+}
+
+.programs-header h2 span {
+    display: block;
+    color: var(--primary-color);
+}
+
+.programs-header > p {
+    max-width: 380px;
+
+    margin: 0;
+
+    color: var(--muted-text);
+}
+
+
+/* =========================================
+   PROGRAM CARD
+========================================= */
+
+.program-card {
+    position: relative;
+
+    height: 100%;
+
+    background: var(--dark-color);
+
+    border: 1px solid var(--border-color);
+    border-radius: 1.25rem;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.program-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(200, 255, 0, 0.35);
+}
+
+
+/* =========================================
+   PROGRAM IMAGE
+========================================= */
+
+.program-image {
+    position: relative;
+
+    height: 280px;
+
+    overflow: hidden;
+}
+
+.program-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.5s ease;
+}
+
+.program-card:hover .program-image img {
+    transform: scale(1.05);
+}
+
+.program-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(
+        to top,
+        rgba(11, 13, 12, 0.75),
+        transparent 60%
+    );
+}
+
+
+/* =========================================
+   PROGRAM LABEL
+========================================= */
+
+.program-label {
+    position: absolute;
+
+    left: 1.25rem;
+    bottom: 1.25rem;
+
+    z-index: 2;
+
+    padding: 0.4rem 0.75rem;
+
+    background: var(--primary-color);
+    color: #080a09;
+
+    border-radius: 50px;
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+
+/* =========================================
+   PROGRAM CONTENT
+========================================= */
+
+.program-content {
+    padding: 2rem;
+}
+
+.program-content h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+
+    margin-bottom: 0.75rem;
+}
+
+.program-content > p {
+    color: var(--muted-text);
+
+    font-size: 0.95rem;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================
+   PROGRAM FEATURES
+========================================= */
+
+.program-features {
+    list-style: none;
+
+    padding: 0;
+    margin: 0 0 2rem;
+}
+
+.program-features li {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+
+    color: #d5d7d6;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 0.65rem;
+}
+
+.program-features i {
+    color: var(--primary-color);
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   PROGRAM LINK
+========================================= */
+
+.program-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: #ffffff;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        gap 0.3s ease;
+}
+
+.program-link:hover {
+    color: var(--primary-color);
+    gap: 0.8rem;
+}
+
+
+/* =========================================
+   FEATURED PROGRAM
+========================================= */
+
+.featured-program {
+    border-color: rgba(200, 255, 0, 0.45);
+}
+
+.popular-badge {
+    position: absolute;
+
+    top: 1rem;
+    right: 1rem;
+
+    z-index: 5;
+
+    padding: 0.45rem 0.75rem;
+
+    background: var(--primary-color);
+    color: #080a09;
+
+    border-radius: 50px;
+
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 1px;
 }
