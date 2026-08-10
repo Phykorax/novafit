@@ -1,0 +1,286 @@
+/* =========================================
+   NOVAFIT - GLOBAL STYLES
+========================================= */
+
+:root {
+    --primary-color: #c8ff00;
+    --dark-color: #0b0d0c;
+    --dark-secondary: #141715;
+    --text-color: #ffffff;
+    --muted-text: #a7aaa8;
+    --border-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--dark-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.navbar {
+    padding: 0.9rem 0;
+    background: rgba(11, 13, 12, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.navbar-brand {
+    color: #ffffff;
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.navbar-brand span {
+    color: var(--primary-color);
+}
+
+.navbar-brand:hover {
+    color: #ffffff;
+}
+
+.nav-link {
+    color: #d5d7d6;
+    font-weight: 500;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.btn-primary-custom {
+    background: var(--primary-color);
+    color: #080a09;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.btn-outline-custom {
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-custom:hover {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero-section {
+    min-height: 100vh;
+    padding-top: 90px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(11, 13, 12, 0.98) 0%,
+            rgba(11, 13, 12, 0.88) 45%,
+            rgba(11, 13, 12, 0.45) 100%
+        ),
+        url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=2000&q=85")
+        center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+}
+
+.hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    margin-bottom: 1.5rem;
+}
+
+.hero-section h1 {
+    max-width: 850px;
+
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 0.95;
+    letter-spacing: -4px;
+    font-weight: 900;
+}
+
+.hero-section h1 span {
+    display: block;
+    color: var(--primary-color);
+}
+
+.hero-description {
+    max-width: 600px;
+    margin: 1.5rem 0;
+
+    color: var(--muted-text);
+    font-size: 1.15rem;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.hero-buttons i {
+    margin-left: 0.5rem;
+}
+
+
+/* =========================================
+   HERO STATS
+========================================= */
+
+.hero-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+
+    margin-top: 2.5rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat strong {
+    color: #ffffff;
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.stat span {
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+}
+
+
+/* =========================================
+   MOBILE NAVBAR ICON
+========================================= */
+
+.navbar-toggler {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+========================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-collapse {
+        padding-top: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.7rem 0;
+    }
+
+    .hero-section {
+        background:
+            linear-gradient(
+                90deg,
+                rgba(11, 13, 12, 0.95),
+                rgba(11, 13, 12, 0.8)
+            ),
+            url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1200&q=80")
+            center / cover no-repeat;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .hero-section h1 {
+        font-size: 3.2rem;
+        letter-spacing: -2px;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+        margin-top: 3rem;
+    }
+
+    .stat strong {
+        font-size: 1.6rem;
+    }
+}
