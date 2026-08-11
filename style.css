@@ -657,6 +657,8 @@ body {
 
 .programs-header > p {
     max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 }
 
@@ -697,6 +699,8 @@ body {
 
 .programs-header {
     margin-bottom: 3rem;
+    align-items: center;
+    text-align: center;
 }
 
 .programs-header h2 {
@@ -708,6 +712,31 @@ body {
 }
 
 .program-content {
+    padding: 1.5rem;
+}
+
+    /*TESTINONIAL RESPONSIVE*/
+.results-section {
+    padding: 5rem 0;
+}
+
+.results-header {
+    margin-bottom: 3rem;
+}
+
+.results-header h2 {
+    letter-spacing: -1px;
+}
+
+.results-stats {
+    margin-bottom: 3.5rem;
+}
+
+.result-stat {
+    padding: 1.5rem 0.5rem;
+}
+
+.testimonial-card {
     padding: 1.5rem;
 }
 }
@@ -729,7 +758,7 @@ body {
 .programs-header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     gap: 3rem;
 
     margin-bottom: 4rem;
@@ -955,4 +984,206 @@ body {
     font-size: 0.65rem;
     font-weight: 800;
     letter-spacing: 1px;
+}
+
+/* =========================================
+   RESULTS & TESTIMONIALS SECTION
+========================================= */
+
+.results-section {
+    padding: 7rem 0;
+    background: var(--dark-color);
+}
+
+
+/* =========================================
+   RESULTS HEADER
+========================================= */
+
+.results-header {
+    max-width: 750px;
+    margin: 0 auto 4rem;
+}
+
+.results-header h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    font-weight: 800;
+
+    margin-bottom: 1.5rem;
+}
+
+.results-header h2 span {
+    display: block;
+    color: var(--primary-color);
+}
+
+.results-header p {
+    max-width: 620px;
+    margin: 0 auto;
+
+    color: var(--muted-text);
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.results-stats {
+    margin-bottom: 5rem;
+}
+
+.result-stat {
+    text-align: center;
+
+    padding: 2rem 1rem;
+
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.result-stat strong {
+    display: block;
+
+    color: var(--primary-color);
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 900;
+    line-height: 1;
+
+    margin-bottom: 0.65rem;
+}
+
+.result-stat span {
+    color: var(--muted-text);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   TESTIMONIAL CARD
+========================================= */
+
+.testimonial-card {
+    height: 100%;
+
+    padding: 2.25rem;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border: 1px solid var(--border-color);
+    border-radius: 1.25rem;
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        background 0.35s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+
+    border-color: rgba(200, 255, 0, 0.35);
+
+    background: rgba(255, 255, 255, 0.045);
+}
+
+
+/* =========================================
+   TESTIMONIAL RATING
+========================================= */
+
+.testimonial-rating {
+    color: var(--primary-color);
+
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================
+   TESTIMONIAL QUOTE
+========================================= */
+
+.testimonial-card blockquote {
+    margin: 0 0 2rem;
+
+    color: #e5e7e6;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TESTIMONIAL AUTHOR
+========================================= */
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+
+    margin-top: auto;
+}
+
+.author-avatar {
+    width: 2.8rem;
+    height: 2.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    background: var(--primary-color);
+    color: #080a09;
+
+    border-radius: 50%;
+
+    font-size: 0.75rem;
+    font-weight: 900;
+}
+
+.testimonial-author strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 0.9rem;
+
+    margin-bottom: 0.15rem;
+}
+
+.testimonial-author span {
+    display: block;
+
+    color: var(--muted-text);
+
+    font-size: 0.75rem;
+}
+
+
+/* =========================================
+   FEATURED TESTIMONIAL
+========================================= */
+
+.featured-testimonial {
+    border-color: rgba(200, 255, 0, 0.4);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(200, 255, 0, 0.06),
+            rgba(255, 255, 255, 0.025)
+        );
 }
