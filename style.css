@@ -771,6 +771,45 @@ body {
     top: 1rem;
     right: 1rem;
 }
+
+/* FINAL CTA RESPONSIVE */
+
+.final-cta-section {
+    padding: 3rem 0;
+}
+
+.final-cta {
+    min-height: 550px;
+
+    padding: 3rem 1.5rem;
+
+    align-items: flex-end;
+
+    background:
+        linear-gradient(
+            0deg,
+            rgba(8, 10, 9, 0.98) 10%,
+            rgba(8, 10, 9, 0.75) 65%,
+            rgba(8, 10, 9, 0.35) 100%
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85")
+        center / cover no-repeat;
+}
+
+.final-cta h2 {
+    letter-spacing: -1px;
+}
+
+.final-cta p {
+    font-size: 0.95rem;
+}
+
+.final-cta-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
 }
 
 /* =========================================
@@ -1512,4 +1551,101 @@ body {
 
 .feature-check::before {
     content: "✓"
+}
+
+/* =========================================
+   FINAL CTA
+========================================= */
+
+.final-cta-section {
+    padding: 5rem 0;
+    background: var(--dark-color);
+}
+
+.final-cta {
+    position: relative;
+
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 5rem;
+
+    border-radius: 1.5rem;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(8, 10, 9, 0.98) 0%,
+            rgba(8, 10, 9, 0.88) 45%,
+            rgba(8, 10, 9, 0.45) 100%
+        ),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+
+
+/* =========================================
+   CTA CONTENT
+========================================= */
+
+.final-cta-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 700px;
+}
+
+.final-cta h2 {
+    font-size: clamp(2.8rem, 6vw, 5rem);
+    line-height: 0.95;
+    letter-spacing: -2px;
+    font-weight: 900;
+
+    margin-bottom: 1.5rem;
+}
+
+.final-cta h2 span {
+    display: block;
+    color: var(--primary-color);
+}
+
+.final-cta p {
+    max-width: 600px;
+
+    color: #d5d7d6;
+
+    font-size: 1.05rem;
+    line-height: 1.7;
+
+    margin-bottom: 2rem;
+}
+
+
+/* =========================================
+   CTA ACTIONS
+========================================= */
+
+.final-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.final-cta-secondary {
+    color: #ffffff;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.final-cta-secondary:hover {
+    color: var(--primary-color);
 }
