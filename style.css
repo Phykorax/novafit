@@ -810,6 +810,28 @@ body {
     gap: 1.25rem;
 }
 
+/* CONTACT RESPONSIVE */
+
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-content {
+    max-width: 100%;
+}
+
+.contact-content h2 {
+    letter-spacing: -1px;
+}
+
+.contact-form-wrapper {
+    padding: 1.5rem;
+}
+
+.contact-form-header h3 {
+    font-size: 1.35rem;
+}
+
 }
 
 /* =========================================
@@ -1648,4 +1670,237 @@ body {
 
 .final-cta-secondary:hover {
     color: var(--primary-color);
+}
+
+/* =========================================
+   CONTACT SECTION
+========================================= */
+
+.contact-section {
+    padding: 7rem 0;
+    background: var(--dark-secondary);
+}
+
+
+/* =========================================
+   CONTACT CONTENT
+========================================= */
+
+.contact-content {
+    max-width: 500px;
+}
+
+.contact-content h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -2px;
+    font-weight: 800;
+
+    margin-bottom: 1.5rem;
+}
+
+.contact-content h2 span {
+    display: block;
+    color: var(--primary-color);
+}
+
+.contact-intro {
+    color: var(--muted-text);
+
+    font-size: 1rem;
+    line-height: 1.7;
+
+    margin-bottom: 2.5rem;
+}
+
+
+/* =========================================
+   CONTACT DETAILS
+========================================= */
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.contact-icon {
+    flex-shrink: 0;
+
+    width: 2.8rem;
+    height: 2.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #080a09;
+    background: var(--primary-color);
+
+    border-radius: 50%;
+
+    font-size: 0.8rem;
+}
+
+.contact-item span {
+    display: block;
+
+    color: var(--muted-text);
+
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    margin-bottom: 0.2rem;
+}
+
+.contact-item strong {
+    display: block;
+
+    color: #ffffff;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+.contact-form-wrapper {
+    padding: 2.5rem;
+
+    background: var(--dark-color);
+
+    border: 1px solid var(--border-color);
+    border-radius: 1.25rem;
+}
+
+.contact-form-header {
+    margin-bottom: 2rem;
+}
+
+.contact-form-header > span {
+    color: var(--primary-color);
+
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.contact-form-header h3 {
+    margin: 0.5rem 0 0;
+
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+
+
+/* =========================================
+   FORM ELEMENTS
+========================================= */
+
+.contact-form label {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    color: #d5d7d6;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    width: 100%;
+
+    padding: 0.9rem 1rem;
+
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.035);
+
+    border: 1px solid var(--border-color);
+    border-radius: 0.65rem;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 0.85rem;
+
+    transition:
+        border-color 0.3s ease,
+        background 0.3s ease;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #6f7471;
+}
+
+.contact-form select {
+    color: #ffffff;
+}
+
+.contact-form select option {
+    color: #080a09;
+    background: #ffffff;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+
+    background: rgba(200, 255, 0, 0.025);
+}
+
+
+/* =========================================
+   CONTACT SUBMIT
+========================================= */
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    width: 100%;
+
+    padding: 1rem 1.25rem;
+
+    color: #080a09;
+    background: var(--primary-color);
+
+    border: 1px solid var(--primary-color);
+    border-radius: 0.7rem;
+
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.contact-submit:hover {
+    color: #ffffff;
+    background: transparent;
 }
