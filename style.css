@@ -832,6 +832,34 @@ body {
     font-size: 1.35rem;
 }
 
+/* FOOTER RESPONSIVE */
+
+.site-footer {
+    padding: 4rem 0 1.25rem;
+}
+
+.footer-main {
+    padding-bottom: 3rem;
+}
+
+.footer-brand p {
+    max-width: 100%;
+}
+
+.footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.footer-bottom-links {
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.back-to-top {
+    align-self: flex-end;
+}
+
 }
 
 /* =========================================
@@ -1903,4 +1931,259 @@ body {
 .contact-submit:hover {
     color: #ffffff;
     background: transparent;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.site-footer {
+    padding: 5rem 0 1.5rem;
+
+    background: #070908;
+
+    border-top: 1px solid var(--border-color);
+}
+
+
+/* =========================================
+   FOOTER MAIN
+========================================= */
+
+.footer-main {
+    padding-bottom: 4rem;
+}
+
+
+/* =========================================
+   FOOTER BRAND
+========================================= */
+
+.footer-logo {
+    display: inline-block;
+
+    color: #ffffff;
+
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+
+    text-decoration: none;
+
+    margin-bottom: 1.25rem;
+}
+
+.footer-logo span {
+    color: var(--primary-color);
+}
+
+.footer-brand p {
+    max-width: 400px;
+
+    color: var(--muted-text);
+
+    font-size: 0.85rem;
+    line-height: 1.7;
+
+    margin-bottom: 1.5rem;
+}
+
+
+/* =========================================
+   FOOTER SOCIALS
+========================================= */
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.footer-socials a {
+    width: 2.3rem;
+    height: 2.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #ffffff;
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    font-size: 0.75rem;
+
+    text-decoration: none;
+
+    transition:
+        color 0.3s ease,
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    color: #080a09;
+
+    background: var(--primary-color);
+
+    border-color: var(--primary-color);
+}
+
+
+/* =========================================
+   FOOTER COLUMNS
+========================================= */
+
+.footer-column h3 {
+    color: #ffffff;
+
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    margin-bottom: 1.5rem;
+}
+
+.footer-column ul {
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-column li a {
+    color: var(--muted-text);
+
+    font-size: 0.85rem;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer-column li a:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   FOOTER CONTACT
+========================================= */
+
+.footer-contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+}
+
+.footer-contact-list i {
+    flex-shrink: 0;
+
+    width: 1rem;
+
+    color: var(--primary-color);
+
+    font-size: 0.75rem;
+
+    text-align: center;
+}
+
+.footer-contact-list span,
+.footer-contact-list a {
+    color: var(--muted-text);
+
+    font-size: 0.8rem;
+    line-height: 1.6;
+
+    text-decoration: none;
+}
+
+.footer-contact-list a:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+========================================= */
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+    padding-top: 1.5rem;
+
+    border-top: 1px solid var(--border-color);
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #666b68;
+
+    font-size: 0.7rem;
+}
+
+.footer-bottom-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.footer-bottom-links a {
+    color: #666b68;
+
+    font-size: 0.7rem;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+}
+
+.footer-bottom-links a:hover {
+    color: var(--primary-color);
+}
+
+
+/* =========================================
+   BACK TO TOP
+========================================= */
+
+.back-to-top {
+    width: 2.3rem;
+    height: 2.3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #080a09;
+    background: var(--primary-color);
+
+    border-radius: 50%;
+
+    font-size: 0.75rem;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease;
+}
+
+.back-to-top:hover {
+    color: #080a09;
+
+    background: #ffffff;
+
+    transform: translateY(-3px);
 }
