@@ -1307,6 +1307,8 @@ body {
             rgba(200, 255, 0, 0.06),
             rgba(255, 255, 255, 0.025)
         );
+
+         transform: translateY(-12px);
 }
 
 /* =========================================
@@ -1446,32 +1448,29 @@ body {
 
 
 /* =========================================
-   PRICING FEATURES
+   FEATURED PRICING
 ========================================= */
 
-.pricing-features {
-    list-style: none;
+.featured-pricing {
+    border-color: rgba(200, 255, 0, 0.5);
 
-    padding: 0;
-    margin: 0 0 2.5rem;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.2);
+
+    /* Keep the featured Pro card slightly raised */
+    transform: translateY(-12px);
 }
 
-.pricing-features li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-
-    color: #d5d7d6;
-
-    font-size: 0.9rem;
-
-    margin-bottom: 1rem;
+.pricing-button-primary {
+    color: #080a09;
+    background: var(--primary-color);
+    border-color: var(--primary-color);
 }
 
-.pricing-features i {
-    color: var(--primary-color);
-
-    font-size: 0.75rem;
+.pricing-button-primary:hover {
+    background: transparent;
+    color: #ffffff;
+    border-color: var(--primary-color);
 }
 
 
@@ -1524,6 +1523,11 @@ body {
 
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.2);
+
+        /* Keep the featured Pro card slightly raised */
+
+    transform: translateY(-12px);
+
 }
 
 .pricing-button-primary {
@@ -2187,3 +2191,55 @@ body {
 
     transform: translateY(-3px);
 }
+
+
+/* =========================
+   SCROLL REVEAL ANIMATION
+========================== */
+
+.reveal {
+    opacity: 0;
+    transition: opacity 0.7s ease-out;
+}
+
+.reveal.show {
+    opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* =========================
+   PRICING BLUR REVEAL
+========================== */
+
+.pricing-card.reveal {
+    opacity: 0;
+    filter: blur(6px);
+    transition:
+        opacity 0.5s ease-out,
+        filter 0.5s ease-out;
+}
+
+.pricing-card.reveal.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pricing-card.reveal {
+        opacity: 1;
+        filter: none;
+        transition: none;
+    }
+}
+

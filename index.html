@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id="top">
 
     <!-- =========================
          NAVIGATION
@@ -57,7 +57,7 @@
                 <ul class="navbar-nav ms-auto align-items-lg-center">
 
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">
+                        <a class="nav-link active" href="#top">
                             Home
                         </a>
                     </li>
@@ -180,7 +180,7 @@
      SERVICES SECTION
 ========================== -->
 
-<section class="services-section">
+<section id="services" class="services-section">
 
     <div class="container">
 
@@ -354,12 +354,13 @@
             <!-- About Image -->
             <div class="col-lg-6">
 
-                <div class="about-image-wrapper">
+                <div class="about-image-wrapper reveal">
 
                     <img
                         src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85"
                         alt="Athlete training in a modern gym"
                         class="about-image"
+                        loading="lazy"
                     >
 
                     <div class="experience-card">
@@ -518,11 +519,12 @@
 
                 <article class="program-card">
 
-                    <div class="program-image">
+                    <div class="program-image reveal">
 
                         <img
                             src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=1000&q=85"
                             alt="Man performing strength training"
+                            loading="lazy"
                         >
 
                         <span class="program-label">
@@ -582,11 +584,12 @@
                         MOST POPULAR
                     </div>
 
-                    <div class="program-image">
+                    <div class="program-image reveal">
 
                         <img
                             src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1000&q=85"
                             alt="Athlete training in a modern gym"
+                            loading="lazy"
                         >
 
                         <span class="program-label">
@@ -642,11 +645,12 @@
 
                 <article class="program-card">
 
-                    <div class="program-image">
+                    <div class="program-image reveal">
 
                         <img
                             src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1000&q=85"
                             alt="Woman training with weights"
+                            loading="lazy"
                         >
 
                         <span class="program-label">
@@ -685,7 +689,7 @@
 
                         </ul>
 
-                        <a href="contact.html" class="program-link">
+                        <a href="#contact" class="program-link">
                             Get started
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -801,7 +805,7 @@
             <!-- Testimonial 1 -->
             <div class="col-lg-4">
 
-                <article class="testimonial-card">
+                <article class="testimonial-card reveal">
 
                     <div class="testimonial-rating">
                         ★★★★★
@@ -834,7 +838,7 @@
             <!-- Testimonial 2 -->
             <div class="col-lg-4">
 
-                <article class="testimonial-card featured-testimonial">
+                <article class="testimonial-card featured-testimonial reveal">
 
                     <div class="testimonial-rating">
                         ★★★★★
@@ -867,7 +871,7 @@
             <!-- Testimonial 3 -->
             <div class="col-lg-4">
 
-                <article class="testimonial-card">
+                <article class="testimonial-card reveal">
 
                     <div class="testimonial-rating">
                         ★★★★★
@@ -936,7 +940,7 @@
             <!-- Starter -->
             <div class="col-lg-4">
 
-                <article class="pricing-card">
+                <article class="pricing-card reveal">
 
                     <div class="pricing-card-header">
 
@@ -971,25 +975,21 @@
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Access to gym facilities
                         </li>
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Basic training programs
                         </li>
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Progress tracking
                         </li>
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Mobile workout access
                         </li>
 
@@ -1012,7 +1012,7 @@
             <!-- Pro -->
             <div class="col-lg-4">
 
-                <article class="pricing-card featured-pricing">
+                <article class="pricing-card featured-pricing reveal">
 
                     <div class="popular-pricing">
                         MOST POPULAR
@@ -1052,25 +1052,21 @@
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Everything in Starter
                         </li>
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Personalized training plan
                         </li>
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Monthly coaching session
                         </li>
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Performance tracking
                         </li>
 
@@ -1093,7 +1089,7 @@
             <!-- Elite -->
             <div class="col-lg-4">
 
-                <article class="pricing-card">
+                <article class="pricing-card reveal">
 
                     <div class="pricing-card-header">
 
@@ -1128,13 +1124,11 @@
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Everything in Pro
                         </li>
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Weekly personal coaching
                         </li>
 
@@ -1146,7 +1140,6 @@
 
                         <li>
                             <span class="feature-check"></span>
-                            <!-- <i class="fa-solid fa-check"></i> -->
                             Priority support
                         </li>
 
@@ -1531,7 +1524,7 @@
 
                 <div class="footer-brand">
 
-                    <a href="#" class="footer-logo">
+                    <a href="index.html" class="footer-logo">
                         NOVA<span>FIT</span>
                     </a>
 
