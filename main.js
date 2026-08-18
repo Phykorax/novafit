@@ -7,33 +7,61 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("NovaFit website loaded successfully.");
 
     // Contact form
-    const contactForm = document.querySelector(".contact-form");
+const contactForm = document.querySelector(".contact-form");
 
-    if (contactForm) {
-        contactForm.addEventListener("submit", (event) => {
-            event.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener("submit", async (event) => {
+        event.preventDefault();
 
-            const submitButton = contactForm.querySelector(".contact-submit");
+        const submitButton = contactForm.querySelector(".contact-submit");
+        const originalButtonContent = submitButton.innerHTML;
 
-            submitButton.innerHTML = `
-                Message Sent
-                <i class="fa-solid fa-check"></i>
-            `;
+        submitButton.innerHTML = `
+            Sending...
+            <i class="fa-solid fa-spinner fa-spin"></i>
+        `;
 
-            submitButton.disabled = true;
+        submitButton.disabled = true;
 
-            setTimeout(() => {
-                contactForm.reset();
+        try {
+            const response = await fetch(contactForm.action, {
+                method: "POST",
+                body: new FormData(contactForm),
+                headers: {
+                    Accept: "application/json"
+                }
+            });
 
+            if (response.ok) {
                 submitButton.innerHTML = `
-                    Send Message
-                    <i class="fa-solid fa-arrow-right"></i>
+                    Message Sent
+                    <i class="fa-solid fa-check"></i>
                 `;
 
-                submitButton.disabled = false;
-            }, 2500);
-        });
-    }
+                contactForm.reset();
+
+                setTimeout(() => {
+                    submitButton.innerHTML = originalButtonContent;
+                    submitButton.disabled = false;
+                }, 2500);
+
+            } else {
+                throw new Error("Form submission failed.");
+            }
+
+        } catch (error) {
+
+            submitButton.innerHTML = `
+                Try Again
+                <i class="fa-solid fa-rotate-right"></i>
+            `;
+
+            submitButton.disabled = false;
+
+            console.error("Form submission error:", error);
+        }
+    });
+}
 
     // Close mobile navigation after clicking a link
     const navMenu = document.querySelector("#mainNav");

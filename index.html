@@ -87,7 +87,7 @@
                     </li>
 
                     <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
-                        <a class="btn btn-primary-custom" href="#contact">
+                        <a class="btn btn-primary-custom" href="#contact-form">
                             Join Now
                         </a>
                     </li>
@@ -133,7 +133,7 @@
                         <div class="hero-buttons">
 
                             <a
-                                href="#contact"
+                                href="#contact-form"
                                 class="btn btn-primary-custom btn-lg"
                             >
                                 Start Your Journey
@@ -563,7 +563,7 @@
 
                         </ul>
 
-                        <a href="#contact" class="program-link">
+                        <a href="#contact-form" class="program-link">
                             Get started
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -628,7 +628,7 @@
 
                         </ul>
 
-                        <a href="#contact" class="program-link">
+                        <a href="#contact-form" class="program-link">
                             Get started
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -689,7 +689,7 @@
 
                         </ul>
 
-                        <a href="#contact" class="program-link">
+                        <a href="#contact-form" class="program-link">
                             Get started
                             <i class="fa-solid fa-arrow-right"></i>
                         </a>
@@ -997,7 +997,7 @@
 
 
                     <a
-                        href="#contact"
+                        href="#contact-form"
                         class="pricing-button"
                     >
                         Get Started
@@ -1074,7 +1074,7 @@
 
 
                     <a
-                        href="#contact"
+                        href="#contact-form"
                         class="pricing-button pricing-button-primary"
                     >
                         Start Training
@@ -1147,7 +1147,7 @@
 
 
                     <a
-                        href="#contact"
+                        href="#contact-form"
                         class="pricing-button"
                     >
                         Go Elite
@@ -1201,7 +1201,7 @@
                 <div class="final-cta-actions">
 
                     <a
-                        href="#contact"
+                        href="#contact-form"
                         class="btn btn-primary-custom"
                     >
                         Start Your Journey
@@ -1324,7 +1324,7 @@
             <!-- Contact Form -->
             <div class="col-lg-7">
 
-                <div class="contact-form-wrapper">
+                <div id="contact-form" class="contact-form-wrapper">
 
                     <div class="contact-form-header">
 
@@ -1339,7 +1339,9 @@
                     </div>
 
 
-                    <form class="contact-form">
+                    <form class="contact-form"
+                    action="https://formspree.io/f/moeapqlo"
+                    method="POST">
 
                         <div class="row g-3">
 
@@ -1355,6 +1357,7 @@
                                     id="name"
                                     name="name"
                                     placeholder="John Doe"
+                                    autocomplete="name"
                                     required
                                 >
 
@@ -1373,6 +1376,7 @@
                                     id="email"
                                     name="email"
                                     placeholder="john@example.com"
+                                    autocomplete="email"
                                     required
                                 >
 
@@ -1383,7 +1387,7 @@
                             <div class="col-md-6">
 
                                 <label for="phone">
-                                    Phone Number
+                                    Phone Number <span class="optional-label">(Optional)</span>
                                 </label>
 
                                 <input
@@ -1391,6 +1395,7 @@
                                     id="phone"
                                     name="phone"
                                     placeholder="+234 800 000 0000"
+                                    autocomplete="tel"
                                 >
 
                             </div>
@@ -1400,7 +1405,8 @@
                             <div class="col-md-6">
 
                                 <label for="goal">
-                                    Primary Goal
+                                    Primary Goal <span class="optional-label"
+                                    >(Optional)</span>
                                 </label>
 
                                 <select id="goal" name="goal">
@@ -1437,7 +1443,7 @@
                             <div class="col-md-6">
 
                                 <label for="experience">
-                                    Training Experience
+                                    Training Experience <span class="optional-label">(Optional)</span>
                                 </label>
 
                                 <select id="experience" name="experience">
@@ -1475,6 +1481,7 @@
                                     name="message"
                                     rows="5"
                                     placeholder="Tell us a little about your goals..."
+                                    required
                                 ></textarea>
 
                             </div>
@@ -1536,19 +1543,19 @@
 
                     <div class="footer-socials">
 
-                        <a href="#" aria-label="Instagram">
+                        <a href="javascript:void(0)" aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
 
-                        <a href="#" aria-label="Facebook">
+                        <a href="javascript:void(0)" aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
 
-                        <a href="#" aria-label="X">
+                        <a href="javascript:void(0)" aria-label="X">
                             <i class="fa-brands fa-x-twitter"></i>
                         </a>
 
-                        <a href="#" aria-label="YouTube">
+                        <a href="javascript:void(0)" aria-label="YouTube">
                             <i class="fa-brands fa-youtube"></i>
                         </a>
 
@@ -1678,17 +1685,17 @@
 
             <div class="footer-bottom-links">
 
-                <a href="#">
+                <a href="privacy.html">
                     Privacy Policy
                 </a>
 
-                <a href="#">
+                <a href="terms.html">
                     Terms of Service
                 </a>
 
             </div>
 
-            <a href="#" class="back-to-top" aria-label="Back to top">
+            <a href="#top" class="back-to-top" aria-label="Back to top">
                 <i class="fa-solid fa-arrow-up"></i>
             </a>
 

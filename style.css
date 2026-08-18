@@ -1515,39 +1515,6 @@ body {
 
 
 /* =========================================
-   FEATURED PRICING
-========================================= */
-
-.featured-pricing {
-    border-color: rgba(200, 255, 0, 0.5);
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.2);
-
-        /* Keep the featured Pro card slightly raised */
-
-    transform: translateY(-12px);
-
-}
-
-.pricing-button-primary {
-    color: #080a09;
-
-    background: var(--primary-color);
-
-    border-color: var(--primary-color);
-}
-
-.pricing-button-primary:hover {
-    background: transparent;
-
-    color: #ffffff;
-
-    border-color: var(--primary-color);
-}
-
-
-/* =========================================
    POPULAR BADGE
 ========================================= */
 
@@ -1806,6 +1773,11 @@ body {
    CONTACT FORM
 ========================================= */
 
+#contact-form {
+    scroll-margin-top: 100px;
+}
+
+
 .contact-form-wrapper {
     padding: 2.5rem;
 
@@ -1898,6 +1870,13 @@ body {
     border-color: var(--primary-color);
 
     background: rgba(200, 255, 0, 0.025);
+}
+
+.optional-label {
+    font-size: 0.75rem;
+    font-weight: 400;
+    opacity: 0.55;
+    margin-left: 4px;
 }
 
 
@@ -2193,9 +2172,9 @@ body {
 }
 
 
-/* =========================
+/* =========================================
    SCROLL REVEAL ANIMATION
-========================== */
+========================================= */
 
 .reveal {
     opacity: 0;
@@ -2207,15 +2186,42 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
     .reveal {
         opacity: 1;
         transform: none;
         transition: none;
     }
 
-    html {
-        scroll-behavior: auto;
+}
+
+
+/* =========================================
+   PRICING CARD REVEAL
+========================================= */
+
+.pricing-card.reveal {
+    opacity: 0;
+    filter: blur(6px);
+
+    transition:
+        opacity 0.5s ease-out,
+        filter 0.5s ease-out;
+}
+
+.pricing-card.reveal.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .pricing-card.reveal {
+        opacity: 1;
+        filter: none;
+        transition: none;
     }
+
 }
 
 /* =========================
