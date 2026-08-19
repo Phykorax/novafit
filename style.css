@@ -72,6 +72,11 @@ body {
     color: var(--primary-color);
 }
 
+.nav-link:focus,
+.nav-link:focus-visible {
+    color: var(--primary-color);
+}
+
 
 /* =========================================
    BUTTONS
