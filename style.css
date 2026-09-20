@@ -67,22 +67,14 @@ body {
     transition: color 0.3s ease;
 }
 
-.nav-link:hover,
-.nav-link.active {
+.nav-link:hover {
     color: var(--primary-color);
 }
 
-.nav-link:focus,
-.nav-link:focus-visible {
-    color: var(--primary-color);
-}
-
-/* =========================================
-   ACTIVE NAVIGATION LINK
-========================================= */
-
-.navbar .nav-link.active {
-    color: var(--primary-color);
+.navbar .navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:focus,
+.navbar .navbar-nav .nav-link:focus-visible {
+    color: var(--primary-color) !important;
 }
 
 
@@ -137,7 +129,7 @@ body {
             rgba(11, 13, 12, 0.88) 45%,
             rgba(11, 13, 12, 0.45) 100%
         ),
-        url("https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=2000&q=85")
+        url("assets/icons/images/hero-fitness.jpg")
         center / cover no-repeat;
 
     display: flex;
@@ -192,26 +184,40 @@ body {
 
 .hero-stats {
     display: flex;
-    flex-wrap: wrap;
-    gap: 2.5rem;
-    margin-top: 2.5rem;
+    align-items: center;
+    gap: 40px;
+    margin-top: 45px;
 }
 
 .stat {
     display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.stat > i {
+    color: #c8ff00;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.stat div {
+    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .stat strong {
     color: #ffffff;
-    font-size: 2rem;
-    line-height: 1;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
 .stat span {
-    color: var(--muted-text);
-    font-size: 0.9rem;
-    margin-top: 0.4rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13px;
+    margin-top: 4px;
 }
 
 
@@ -971,21 +977,15 @@ body {
 
 .pricing-card {
     position: relative;
-
     display: flex;
     flex-direction: column;
-
     height: 100%;
     min-height: 560px;
-
     padding: 2.5rem;
-
     background: var(--dark-color);
     border: 1px solid var(--border-color);
     border-radius: 1.25rem;
-
     overflow: hidden;
-
     transition:
         transform 0.35s ease,
         border-color 0.35s ease;
@@ -1048,29 +1048,30 @@ body {
 }
 
 
-/* =========================================
-   FEATURED PRICING
-========================================= */
-
+/* FEATURED PRICING */
 .featured-pricing {
     border-color: rgba(200, 255, 0, 0.5);
-
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.2);
-
     transform: translateY(-12px);
+    color: #fff;
+}
+
+.featured-pricing .feature-check {
+    color: var(--primary-color);
+    background: #080a09;
 }
 
 .pricing-button-primary {
-    color: #080a09;
-    background: var(--primary-color);
-    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: #252b0f;
+    border-color: #080a09;
 }
 
 .pricing-button-primary:hover {
+    color: #080a09;
     background: transparent;
-    color: #ffffff;
-    border-color: var(--primary-color);
+    border-color: #080a09;
 }
 
 /* =========================================
@@ -1111,20 +1112,15 @@ body {
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
-
     width: 100%;
     margin-top: auto;
     padding: 0.95rem 1.25rem;
-
     color: #ffffff;
-
     border: 1px solid var(--border-color);
     border-radius: 0.7rem;
-
     font-size: 0.85rem;
     font-weight: 800;
     text-decoration: none;
-
     transition:
         background 0.3s ease,
         color 0.3s ease,
@@ -1146,12 +1142,9 @@ body {
     position: absolute;
     top: 1.25rem;
     right: 1.25rem;
-
     padding: 0.45rem 0.75rem;
-
-    color: #080a09;
-    background: var(--primary-color);
-
+    color: var(--primary-color);
+    background: var(--dark-color);
     border-radius: 50px;
     font-size: 0.65rem;
     font-weight: 900;
@@ -1177,20 +1170,21 @@ body {
 
 .feature-check {
     flex-shrink: 0;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     width: 1.1rem;
     height: 1.1rem;
-
-    color: #080a09;
-    background: var(--primary-color);
-
+    color: var(--primary-color);
+    background: var(--dark-color);
     border-radius: 50%;
     font-size: 0.7rem;
     font-weight: 900;
+}
+
+.featured-pricing .feature-check {
+    color: var(--primary-color);
+    background: var(--dark-color);
 }
 
 .feature-check::before {
@@ -2700,4 +2694,3 @@ body {
     height: 42px;
 }
 }
-
