@@ -382,51 +382,104 @@ if (navMenu && navLinks.length) {
 }
 
 
-    // =========================================
-    // ACTIVE NAVIGATION LINK
-    // =========================================
+// =========================================
+// ACTIVE NAVIGATION LINK
+// =========================================
 
-    const sections =
-        document.querySelectorAll(
-            "section[id]"
-        );
+const sections =
+    document.querySelectorAll("section[id]");
 
-    const navigationLinks =
-        document.querySelectorAll(
-            ".navbar .nav-link"
-        );
+const navigationLinks =
+    document.querySelectorAll(".navbar .nav-link");
+
+if (navigationLinks.length) {
+
+    const updateActiveNav = () => {
+
+        // -----------------------------------------
+        // GET CURRENT PAGE
+        // -----------------------------------------
+
+        const currentPage =
+            window.location.pathname
+                .split("/")
+                .pop()
+                .toLowerCase();
 
 
-    if (
-        sections.length &&
-        navigationLinks.length
-    ) {
+        // -----------------------------------------
+        // PROGRAMS PAGE
+        // -----------------------------------------
 
-        const updateActiveNav =
-    () => {
+        if (currentPage === "programs.html") {
+
+            navigationLinks.forEach((link) => {
+                link.classList.remove("active");
+            });
+
+            const programsLink =
+                document.querySelector(
+                    '.navbar .nav-link[href="programs.html"]'
+                );
+
+            if (programsLink) {
+                programsLink.classList.add("active");
+            }
+
+            return;
+        }
+
+
+        // -----------------------------------------
+        // ABOUT PAGE
+        // -----------------------------------------
+
+        if (currentPage === "about.html") {
+
+            navigationLinks.forEach((link) => {
+                link.classList.remove("active");
+            });
+
+            const aboutLink =
+                document.querySelector(
+                    '.navbar .nav-link[href="about.html"]'
+                );
+
+            if (aboutLink) {
+                aboutLink.classList.add("active");
+            }
+
+            return;
+        }
+
+
+        // -----------------------------------------
+        // HOMEPAGE
+        // -----------------------------------------
+
+        if (!sections.length) {
+            return;
+        }
+
 
         const scrollPosition =
             window.scrollY + 150;
 
 
         // -----------------------------------------
-        // HOME ACTIVE AT TOP OF PAGE
+        // HOME ACTIVE AT TOP
         // -----------------------------------------
 
         if (window.scrollY < 100) {
 
-            navigationLinks.forEach(
-                (link) => {
-                    link.classList.remove("active");
-                }
-            );
-
+            navigationLinks.forEach((link) => {
+                link.classList.remove("active");
+            });
 
             const homeLink =
                 document.querySelector(
-                    '.navbar .nav-link[href="#top"]'
+                    '.navbar .nav-link[href="index.html#top"], .navbar .nav-link[href="#top"]'
                 );
-
 
             if (homeLink) {
                 homeLink.classList.add("active");
@@ -436,68 +489,108 @@ if (navMenu && navLinks.length) {
         }
 
 
+        // -----------------------------------------
+        // FIND CURRENT HOMEPAGE SECTION
+        // -----------------------------------------
+
+        let currentSection = null;
+
         sections.forEach((section) => {
 
-                    const sectionTop =
-                        section.offsetTop;
+            const sectionTop =
+                section.offsetTop;
 
-                    const sectionHeight =
-                        section.offsetHeight;
+            const sectionHeight =
+                section.offsetHeight;
 
-                    const sectionId =
-                        section.getAttribute("id");
+            if (
+                scrollPosition >= sectionTop &&
+                scrollPosition <
+                    sectionTop + sectionHeight
+            ) {
+                currentSection = section;
+            }
 
-
-                    if (
-                        scrollPosition >= sectionTop &&
-                        scrollPosition <
-                            sectionTop + sectionHeight
-                    ) {
-
-                        navigationLinks.forEach(
-                            (link) => {
-
-                                link.classList.remove(
-                                    "active"
-                                );
+        });
 
 
-                                const href =
-                                    link.getAttribute(
-                                        "href"
-                                    );
+        if (!currentSection) {
+            return;
+        }
 
 
-                                if (
-                                    href ===
-                                    `#${sectionId}`
-                                ) {
-
-                                    link.classList.add(
-                                        "active"
-                                    );
-                                }
-
-                            }
-                        );
-
-                    }
-
-                });
-
-            };
+        const sectionId =
+            currentSection.getAttribute("id");
 
 
-        window.addEventListener(
-            "scroll",
-            updateActiveNav,
-            { passive: true }
-        );
+        // -----------------------------------------
+        // CLEAR ACTIVE STATES
+        // -----------------------------------------
+
+        navigationLinks.forEach((link) => {
+            link.classList.remove("active");
+        });
 
 
-        updateActiveNav();
-    }
+        // -----------------------------------------
+        // ACTIVATE CORRESPONDING LINK
+        // -----------------------------------------
 
+        navigationLinks.forEach((link) => {
+
+            const href =
+                link.getAttribute("href");
+
+
+            // Normal homepage section links
+            if (
+                href === `#${sectionId}` ||
+                href === `index.html#${sectionId}`
+            ) {
+                link.classList.add("active");
+            }
+
+
+            // Programs section → programs.html
+            if (
+                sectionId === "programs" &&
+                href === "programs.html"
+            ) {
+                link.classList.add("active");
+            }
+
+
+            // About section → about.html
+            if (
+                sectionId === "about" &&
+                href === "about.html"
+            ) {
+                link.classList.add("active");
+            }
+
+        });
+
+    };
+
+
+    // -----------------------------------------
+    // UPDATE WHILE SCROLLING
+    // -----------------------------------------
+
+    window.addEventListener(
+        "scroll",
+        updateActiveNav,
+        { passive: true }
+    );
+
+
+    // -----------------------------------------
+    // INITIAL STATE
+    // -----------------------------------------
+
+    updateActiveNav();
+
+}
 
     
 });
