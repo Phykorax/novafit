@@ -148,13 +148,12 @@ body {
 }
 
 .hero-section h1 {
-    max-width: 850px;
+    max-width: 1000px;
     font-size: clamp(3rem, 6vw, 5.5rem);
     line-height: 0.95;
     letter-spacing: -4px;
     font-weight: 900;
 }
-
 .hero-section h1 span {
     display: block;
     color: var(--primary-color);
